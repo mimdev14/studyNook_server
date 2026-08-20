@@ -1,0 +1,13 @@
+# Ignore the node_modules folder
+node_modules/
+
+# Ignore the main environment variables file
+.env
+
+# Ignore all environment-specific files
+# Example: .env.local, .env.development, .env.production
+.env.*
+
+# Do NOT ignore the example environment file
+# This file can be safely committed to GitHub
+!.env.example
