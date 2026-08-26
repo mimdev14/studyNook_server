@@ -67,6 +67,7 @@ router.post("/", requireAuth, async (req, res) => {
     const result = await collections.rooms().insertOne(room);
     res.status(201).json({ ...room, _id: result.insertedId });
   } catch (err) {
+    console.error("POST /api/rooms failed:", err);   // ← add this line
     res.status(500).json({ message: "Failed to create room" });
   }
 });

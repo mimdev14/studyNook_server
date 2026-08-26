@@ -11,8 +11,8 @@ async function requireAuth(req, res, next) {
     req.user = session.user;
     next();
   } catch (err) {
+    console.error("requireAuth failed:", err);   // ← add this line
     res.status(401).json({ message: "Unauthorized" });
   }
 }
-
 module.exports = { requireAuth };
