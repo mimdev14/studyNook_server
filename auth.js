@@ -1,7 +1,7 @@
-const { betterAuth } = require("better-auth");
-const { mongodbAdapter } = require("better-auth/adapters/mongodb");
+async function createAuth(db) {
+  const { betterAuth } = await import("better-auth");
+  const { mongodbAdapter } = await import("better-auth/adapters/mongodb");
 
-function createAuth(db) {
   return betterAuth({
     database: mongodbAdapter(db),
     secret: process.env.BETTER_AUTH_SECRET,
