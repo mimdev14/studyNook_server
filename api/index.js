@@ -15,7 +15,7 @@ async function getReady() {
     readyPromise = (async () => {
       const { toNodeHandler } = await import("better-auth/node");
       const db = await connectDB();
-      const auth = createAuth(db);
+      const auth = await createAuth(db);   // ← added await
       return { toNodeHandler, auth };
     })();
   }
