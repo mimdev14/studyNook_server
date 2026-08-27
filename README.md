@@ -4,6 +4,8 @@ Backend API for [StudyNook](https://studynook-client-zeta.vercel.app) — a libr
 
 Live API: https://study-nook-server-theta.vercel.app
 
+Client repository: https://github.com/mimdev14/studynook-client.git
+
 - 🔐 Better Auth authentication with HTTP-only cookie sessions, mounted on Express
 - 🏫 Full CRUD API for study rooms, with server-side ownership verification
 - 📅 Booking API with time-conflict detection to prevent double-booking
